@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  color: #333;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+input {
+  padding: 10px;
+  width: 70%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+.result {
+  margin-top: 20px;
+}
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.day {
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  width: 100px;
+  border-radius: 8px;
+}
+.hourly {
+  display: flex;
+  overflow-x: auto;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.hour {
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 70px;
+  text-align: center;
+  scroll-snap-align: start;
+  font-size: 14px;
+}
+.hour img {
+  width: 40px;
+  height: 40px;
+}
+body.cold {
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+body.warm {
+  background: linear-gradient(to right, #ffe259, #ffa751);
+}
+body.hot {
+  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+}
+body.default {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+#saveCityBtn {
+  margin-top: 10px;
+  padding: 6px 12px;
+}
+#favoritesContainer {
+  margin-top: 20px;
+  text-align: left;
+}
+#favoritesList {
+  list-style: none;
+  padding: 0;
+}
+
+#favoritesList li {
+  cursor: pointer;
+  padding: 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+#favoritesList li:hover {
+  background-color: #f0f0f0;
+}
+
+canvas#forecastChart {
+  width: 100% !important;
+  max-width: 100%;
+  height: 450px !important;
+  max-height: 500px;
+  margin-top: 20px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  input,
+  select {
+    width: 100%;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .forecast {
+    justify-content: center;
+  }
+  .day {
+    width: 80px;
+    font-size: 14px;
+  }
+  .hour {
+    font-size: 12px;
+    min-width: 60px;
+  }
+  .hour img {
+    width: 32px;
+    height: 32px;
+  }
+}
